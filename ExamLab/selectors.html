@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+
+    <style>
+    p {
+        color: green;
+    }
+
+    .higlight {
+        background: yellow;
+        padding: 5px;
+    }
+
+    #header {
+        background: blue;
+        color: white;
+        padding: 10px;
+    }
+
+    p:hover {
+        color: red;
+        background-color: #ffe5e5;
+        cursor: pointer;
+    }
+
+    input[type="text"]:focus {
+        border-color: rgb(red, green, blue);
+        outline: none;
+        background-color: #fff0fa;
+    }
+
+    .body {
+        font-family: serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .shadow {
+        font-size: 30px;
+        text-shadow: 5px 5px 5px red;
+    }
+
+     .text_propreties {
+        text-align: justify;
+        text-decoration: underline;
+        line-height: 1.5;
+    }
+
+    .box-color {
+        width: 300px;
+        height: 120px;
+        background-color: lightblue;
+        padding: 20px;
+    }
+
+</style>
+</head>
+<body>
+    
+    <h1>ตัวอย่าง CSS selectors</h1>
+
+    <h2 class="shadow">บลาๆๆๆๆๆๆ</h2>
+
+    <h3 class="text_propreties">คิดไม่ออกว่าจะเขียนไรละ เอานี่ละกัร</h3>
+
+    <h4 class="box-color">สีอะ ไม่รู้เหมือนกัน</h4>
+
+    <p>เอาเมาส์มานี่สิ</p>
+
+    <p class="body">เถอะ</p>
+
+    <!--ใช้ได้กับทุก Element ที่เป็น p-->
+    <p>ข้อความนี้สีเขียวด้วย Element</p>
+
+    <!--ใช้ได้เรื่อยๆ นิยมใช้-->
+    <p class="higlight">
+        ข้อความนี้มี class select
+    </p>
+
+    <!--แนะนำให้ใช้ครั้งเดียว-->
+    <div id="header">
+        นี่คือพื้นที่ header
+    </div>
+    <br><br>
+    <input type="text" placeholder="พิมพ์สิ" >
+</body>
+</html>
