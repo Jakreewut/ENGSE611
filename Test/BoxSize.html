@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid #0077ff;
+  margin: 20px;
+  background-color: #cce5ff;
+}
+
+/* ตัวอย่างแบบปกติ (content-box) */
+.content-box {
+  box-sizing: content-box;
+}
+
+/* ตัวอย่างแบบ border-box */
+.border-box {
+  box-sizing: border-box;
+  background-color: #ffd8cc;
+}
+
+.Box-shadow1 {
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.Box-shadow2 {
+    box-shadow: 0 12px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+.border-style {
+    border-style: groove;
+}
+
+/*block | inline | block-inline*/
+.block-ex {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #3399FF;
+}
+
+.inline-ex {
+    display: inline;
+    padding: 5px;
+    background: #ffd8cc;
+    margin-right: 5px;
+}
+
+.inline-block-ex {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background: #d2ffd2;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #4caf50;
+}
+/* flex box row */
+.flex-box-ex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    height: 150px;
+}
+
+.item {
+    background: navy;
+    color: white;
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* flex box column */
+.flex-boxC-ex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f0f0f0;
+    padding: 15px;
+    border: 2px solid #ccc;
+    height: 200px;
+}
+
+.itemC {
+    background: navy;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.stretch .itemC {
+    background: teal;
+    height: auto;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<h2>CSS Box Model</h2>
+
+<h3>1) box-sizing: content-box (ค่าปกติ)</h3>
+<div class="box content-box Box-shadow1 border-radius border-style">
+  ความกว้างที่กำหนด = 200px  
+  (ไม่รวม padding + border)
+</div>
+
+<h3>2) box-sizing: border-box</h3>
+<div class="box border-box Box-shadow2">
+  ความกว้างที่กำหนด = 200px  
+  (รวม padding + border อยู่ใน 200px)
+</div>
+
+<h3>3) ข้างบนมันเยอะละ มานี่บ้าง</h3>
+<div class="block-ex">
+  ตรงนี้คือหนูทดลอง ของ Class ต่างๆ 1
+</div>
+
+<h3>4) ข้างบนมันเยอะละ มานี่บ้าง</h3>
+<div class="inline-ex">
+  ตรงนี้คือหนูทดลอง ของ Class ต่างๆ 2
+</div>
+<div class="inline-ex">
+  เหมือนกันแค่คนละชื่อ
+</div>
+<div class="inline-ex">
+  ทำให้มันเยอะเฉยๆ ไม่มีไร
+</div>
+
+
+<h3>5) ข้างบนมันเยอะละ มานี่บ้าง</h3>
+<div class="inline-block-ex">
+  หนูทดลอง 
+</div>
+<div class="inline-block-ex">
+  หมาทดลอง 
+</div>
+<div class="inline-block-ex">
+  แมวทดลอง 
+</div>
+<div class="inline-block-ex">
+  เยอะไปละ 
+</div>
+
+
+<h3>6) flex row </h3>
+<div class="flex-box-ex" style="justify-content: center; ">
+    <div class="item">กระเพราไข่ดาว</div>
+    <div class="item">ก๋วยเตี๋ยว</div>
+    <div class="item">ข้าวซอยไก่พิเศษ 1</div>
+</div>
+
+<h3>7) flex column </h3>
+<div class="flex-boxC-ex" style="justify-content: center; ">
+    <div class="itemC">อยากนอน</div>
+    <div class="itemC">กลับบ้าน</div>
+    <div class="itemC">เล่นเกม</div>
+</div>
+
+<h3>8) flex column stretch </h3>
+<div class="flex-boxC-ex stretch" style="align-items: stretch; ">
+    <div class="itemC">1</div>
+    <div class="itemC">2</div>
+    <div class="itemC">3</div>
+</div>
+
+
+</body>
+</html>
