@@ -1,0 +1,29 @@
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%; 
+    min-height: 850px;
+}
+
+.menu {
+    background-color: #097e1d; 
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    background-color: #f3f4f6; 
+    padding: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
