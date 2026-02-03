@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output">ผลลัพธ์จะแสดงที่นี่....</div>
+    <button onclick="runDemo">Run code</button>
+
+    <script>
+        function runDemo() {
+            const out = [];
+
+            let number = 7;
+
+            //if...else
+            if (number % 2 === 0) {
+                out.push(number + " เป็นเลขคู่");
+                console.log(number + " เป็นเลขคู่");
+            } else {
+                out.push(number + " เป็นเลขคี่");
+                console.log(number + " เป็นเลขคี่");
+            }
+
+            //for loop
+            out.push("นับเลข 1 ถึง 5:");
+            console.log("นับเลข 1 ถึง 5:");
+            for (let i = 1; i <= 5; i++) {
+                out.push(i);
+                console.log(i);
+            }
+
+            //switch
+            let day = 3;
+            let dayName = '';
+
+            switch (day) {
+                case 1:
+                    dayName = 'จันทร์';
+                    break;
+                case 2:
+                    dayName = 'อังคาร';
+                    break;
+                case 3:
+                    dayName = 'พุธ';
+                    break;
+                case 4:
+                    dayName = 'พฤหัสบดี';
+                    break;
+                case 5:
+                    dayName = 'ศุกร์';
+                    break;
+                case 6:
+                    dayName = 'เสาร์';
+                    break;
+                case 7:
+                    dayName = 'อาทิตย์';
+                    break;
+                default:
+                    dayName = 'ไม่ทราบวัน';
+            }
+            out.push("วันนี้วัน" + dayName);
+            console.log("วันนี้วัน" + dayName);
+
+            //output to webpage
+            document.getElementById("output").textContent = out.join("\n");
+
+            //display console
+            console.clear();
+            out.forEach(line => console.log(">" + line));
+        }
+    </script>
+</body>
+</html>

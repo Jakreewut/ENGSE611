@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="runDemo()">Run code</button>
+    <script>
+        function runDemo() {
+
+            console.clear();
+            const output = [];
+
+            let studentName = 'สมชาย';
+            let age = 20;
+            const university = 'มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา';
+
+            let aString = "Hello, World!";
+
+            //output
+            output.push("ชื่อนักศึกษา:" + "studentName");
+            output.push("อายุ:" + age + "ปี");
+            output.push("มหาวิทยาลัย:" + university);
+
+            //output to console
+            console.log("ชื่อนักศึกษา:", studentName);
+            console.log("อายุ:", age);
+            console.log("มหาวิทยาลัย:", university);
+
+            console.log('Type of aString;', typeof aString);
+            
+            //change
+            age = 21; //เปลี่ยนอายุ
+            output.push("อายุใหม่:" + age + "ปี");
+            console.log("อายุใหม่", age);
+
+            try {
+                university = 'RMUTL'; //error
+            } catch (error) {
+                output.push("ข้อผิดพลาด:" + error.message);
+                console.error("ข้อผิดพลาด:", error);
+            }
+            //แสดงผลลัพธ์
+            document.getElementById("outputBox").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

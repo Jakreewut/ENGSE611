@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์จะแสดงที่นี่....</pre>
+    <button onclick="runOpelate()"> Run code</button>
+    
+    <script>
+        function runOpelate() {
+            const out = [];
+            
+            let a = 10;
+            let b = 3;
+
+            //Arithmetic Operators
+            out.push("1) Arithmetic Operators:");
+            out.push("a + b = " + (a + b));
+            out.push("a - b = " + (a - b));
+            out.push("a * b = " + (a * b));
+            out.push("a / b = " + (a / b));
+            out.push("a % b = " + (a % b));
+            out.push("a ** b = " + (a ** b));
+
+            //Comparison Operators
+            out.push("\n2) Comparison Operators:");
+            out.push("5 > 3: " + (a > b));
+            out.push("5 < 3: " + (a < b));
+            out.push("5 >= 5: " + (a >= b));
+            out.push("5 <= 5: " + (a <= b));
+            out.push("a == b: " + (a == b));
+            out.push("a != b: " + (a != b));
+
+            //Logical Operators
+            out.push("\n3) Logical Operators:");  
+            out.push("true && false:" + (true && false));
+            out.push("true || false:" + (true || false));
+            out.push("!true:" + (!true));
+
+            //Assignment Operators
+            let x = 10;
+            out.push("\n4) Assignment Operators:");
+            out.push("x = 10 -> x: " + (x += 5)); //x = x + 5
+            out.push("x -= 3 :" + (x -= 3)); //x = x - 3
+
+            //Increment and Decrement Operators
+            let y = 5;
+            out.push("\n5) Increment and Decrement Operators:");
+            out.push("y = 5 -> y++:" + (y++)); //5
+            out.push("After y++ , y = " + y);
+
+            //ternary Operator
+            let age = 20;
+            let result = age >= 20 ? "ผู้ใหญ่" : "เด็ก";
+            out.push("\n6) Ternary Operator:");
+            out.push("age = 20 -> Result :" + result );
+
+            //output to webpage
+            document.getElementById("output").textContent = out.join("\n");
+
+            //display console
+            console.clear();
+            out.forEach(line => console.log(line));
+        }
+    </script>
+</body>
+</html>

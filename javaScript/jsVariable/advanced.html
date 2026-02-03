@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="output">ผลลัพธ์จะแสดงที่นี่....</pre>
+    <button onclick="runStringDemo()">Run code</button>
+
+    <script>
+        function runStringDemo() {
+            const out = [];
+
+            let text = 'JavaScript เจ๋งมาก';
+            let firstName = "สมชาย";
+
+            //template literal
+            out.push('หวัดดี' + firstName + '!');
+            console.log('หวัดดี ${firstName}!'); //หวัดดี สมชาย
+
+            //String Methods
+            out.push("ค.ยาว:" + text.length);
+            console.log("ค.ยาว:", text.length); //ค.ยาว: 15
+
+            out.push("ตัวใหญ่:" + text.toLocaleUpperCase() );
+            console.log("ตัวใหญ่:", text.toLocaleUpperCase() ); //ตัวใหญ่: JAVASCRIPT เจ๋งมาก
+
+            //output to webpage
+            document.getElementById("output").textContent = out.join("\n");
+
+            //display console
+            console.clear();
+            out.forEach(line => console.log(">" + line));
+
+        }
+    </script>
+</body>
+</html>
