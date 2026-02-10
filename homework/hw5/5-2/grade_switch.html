@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Grade</title>
+
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #output { 
+            background-color: #0b19df; 
+            color: #ffffff; 
+            padding: 10px; 
+            border-radius: 8px; 
+            white-space: pre-line;
+            margin-top: 8px;
+            box-shadow: 0 8px 10px rgba(255, 252, 48, 0.959);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="runDemo()">Run code</button>
+    <div id="output">ตรงนี้...</div>
+
+    <script>
+        function runDemo() {
+            let score = Math.floor(Math.random() * 101);
+            let grade = "";
+            let status = "";
+            let Description = ""; 
+
+            if (score >= 80) {
+                grade = "A";
+            } else if (score >= 70) {
+                grade = "B";
+            } else if (score >= 60) {
+                grade = "C";
+            } else if (score >= 50) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            if (score >= 50) {
+                status = "ผ่าน";
+            } else {
+                status = "ไม่ผ่าน";
+            }
+
+            switch (grade) {
+                case "A" :Description = "ยอดเยี่ยมมาก"; break;
+                case "B" :Description = "ดีมาก รักษามาตรฐานไว้"; break;
+                case "C" :Description = "ผ่านเกณฑ์ระดับดี"; break;
+                case "D" :Description = "พอใช้ แต่ควรพัฒนาเพิ่ม"; break;
+                case "F" :Description = "ลงทะเบียนเรียนใหม่"; break;
+            }
+
+            const  result = `คะแนนที่ได้ : ${score} \n เกรด : ${grade} \n สถานะ : ${status}\n คำอธิบายผลการเรียน : ${Description}`;
+
+            console.log(result);
+
+            document.getElementById("output").innerText = result;
+
+        }
+    </script>
+</body>
+</html>
